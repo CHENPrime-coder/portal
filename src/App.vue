@@ -106,7 +106,7 @@ const openNewTab = (url) => {
             <a 
               v-for="social in socialLinks" 
               :key="social.name"
-              :href="social.link"
+              @click="openNewTab(social.link)"
               class="group flex items-center gap-1.5 md:gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:border-white/40"
               :title="social.name"
             >
