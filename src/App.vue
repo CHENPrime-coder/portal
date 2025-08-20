@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 const services = ref([
   {
@@ -7,6 +7,7 @@ const services = ref([
     title: '个人博客',
     description: '技术分享与生活记录',
     icon: '📝',
+    shortcut: '/blog',
     link: 'https://www.chenprime.xyz',
     color: 'from-blue-500 to-blue-600'
   },
@@ -15,6 +16,7 @@ const services = ref([
     title: '视频站',
     description: 'Luna TV',
     icon: '📺',
+    shortcut: '/tv',
     link: 'https://vxmspqeuohoi.ap-northeast-1.clawcloudrun.com/',
     color: 'from-gray-500 to-gray-600'
   },
@@ -23,6 +25,7 @@ const services = ref([
     title: '网盘站',
     description: 'OpenList',
     icon: '💾',
+    shortcut: '/disk',
     link: 'https://ksqdblqxondd.us-west-1.clawcloudrun.com/',
     color: 'from-gray-500 to-gray-600'
   },
@@ -31,6 +34,7 @@ const services = ref([
     title: '代码仓库',
     description: 'GitHub 项目管理',
     icon: '💻',
+    shortcut: '/github',
     link: 'https://github.com/chenprime-coder',
     color: 'from-gray-500 to-gray-600'
   }
@@ -78,6 +82,33 @@ const skills = ref([
 const openNewTab = (url) => {
   window.open(url, '_blank')
 }
+
+// 检查并处理 URL 路径跳转
+const handleUrlRedirect = () => {
+  const path = window.location.pathname
+  const service = services.value.find(service => service.shortcut === path)
+
+  // 如果路径不为空且在服务映射中存在
+  if (service) {
+    window.location.href = service.link
+  }
+}
+
+const handlePopState = () => {
+  handleUrlRedirect()
+}
+
+onMounted(() => {
+  // 页面加载时检查 URL
+  handleUrlRedirect()
+  
+  // 监听浏览器前进后退按钮
+  window.addEventListener('popstate', handlePopState)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('popstate', handlePopState)
+})
 </script>
 
 <template>
