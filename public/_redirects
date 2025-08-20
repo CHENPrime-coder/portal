@@ -1,0 +1,7 @@
+/blog https://www.chenprime.xyz 302
+/tv https://vxmspqeuohoi.ap-northeast-1.clawcloudrun.com/ 302
+/disk https://ksqdblqxondd.us-west-1.clawcloudrun.com/ 302
+/github https://github.com/chenprime-coder 302
+
+# 其他所有路径都重定向到首页
+/* /index.html 200
