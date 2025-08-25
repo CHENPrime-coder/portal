@@ -189,6 +189,7 @@ onUnmounted(() => {
             v-for="service in services" 
             :key="service.id"
             class="group relative bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-6 cursor-pointer transition-all duration-300 hover:scale-105 hover:bg-white/20 border border-white/20"
+            @auxclick="openNewTab(service.link)"
             @click="openNewTab(service.link)"
           >
             <!-- 渐变背景 -->
