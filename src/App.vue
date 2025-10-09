@@ -17,7 +17,7 @@ const services = ref([
     description: 'Luna TV',
     icon: '📺',
     shortcut: '/tv',
-    link: 'https://vxmspqeuohoi.ap-northeast-1.clawcloudrun.com/',
+    link: 'https://vxmspqeuohoi.ap-northeast-1.clawcloudrun.com',
     color: 'from-gray-500 to-gray-600'
   },
   {
@@ -26,7 +26,7 @@ const services = ref([
     description: 'OpenList',
     icon: '💾',
     shortcut: '/disk',
-    link: 'https://ksqdblqxondd.us-west-1.clawcloudrun.com/',
+    link: 'https://hbudjbzq.us-west-1.clawcloudrun.com',
     color: 'from-gray-500 to-gray-600'
   },
   {
@@ -45,7 +45,7 @@ const socialLinks = ref([
   { name: 'Steam', icon: '🎮', link: 'https://steamcommunity.com/id/chenprime' }
 ])
 
-// vue, c#, kotlin, java, python
+// javascript, c#, kotlin, java, python
 const skills = ref([  
   {
     name: 'C#',
@@ -60,8 +60,8 @@ const skills = ref([
     textColor: 'text-purple-300'
   },
   {
-    name: 'Vue.js',
-    color: 'from-green-400 to-blue-500',
+    name: 'JavaScript',
+    color: 'from-green-400 to-green-500',
     bgColor: 'bg-green-500/20',
     textColor: 'text-green-300'
   },
