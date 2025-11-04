@@ -17,7 +17,7 @@ const services = ref([
     description: 'Luna TV',
     icon: '📺',
     shortcut: '/tv',
-    link: 'https://vxmspqeuohoi.ap-northeast-1.clawcloudrun.com',
+    link: 'https://tv.chenprime.xyz',
     color: 'from-gray-500 to-gray-600'
   },
   {
